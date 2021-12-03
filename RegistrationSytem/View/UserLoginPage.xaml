@@ -1,0 +1,37 @@
+﻿<Page x:Class="RegistrationSytem.View.UserLoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RegistrationSytem.View"
+      mc:Ignorable="d" 
+      Height="768" Width="1024" Background="White" ShowsNavigationUI="False"
+      Title="UserLoginPage">
+
+    <Grid>
+        <Border Width="400" Height="220" BorderBrush="Black" BorderThickness="2" CornerRadius="1">
+            <Grid x:Name="xLoginPanel">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Login" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+
+                <TextBlock Text="Handle" Grid.Row="1" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBlock>
+                <TextBox x:Name="xHandle" Text="{Binding UserHandle, Mode=OneWayToSource}" Grid.Row="1" Grid.Column="2" Width="200" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBox>
+
+                <TextBlock Text="Password" Grid.Row="2" FontSize="22" FontWeight="SemiBold" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBlock>
+                <TextBox x:Name="xPassword" Text="{Binding UserPassword, Mode=OneWayToSource}" Grid.Row="2" Grid.Column="2" Width="200" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Center"></TextBox>
+
+                <Button x:Name="xLoginBtn" Click="xLoginBtn_Click" Content="Login" Width="100" Height="30" Background="Black" Foreground="White" FontWeight="Bold"
+                    Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center"></Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
